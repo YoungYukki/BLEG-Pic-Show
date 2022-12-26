@@ -7,8 +7,10 @@ def read_settings():
     return settings
 
 def start_file_server(file_root:str, port:int):
-    cmd = f'start powershell cd {file_root};python -m http.server {port}'
-    subprocess.run(cmd, shell=True)
+    cmd1 = f'start powershell cd {file_root};python -m http.server {port}'
+    subprocess.run(cmd1, shell=True)
+    cmd2 = f'start powershell .env\\Scripts\\python.exe app.py'
+    subprocess.run(cmd2, shell=True)
 
 
 if __name__ == '__main__':

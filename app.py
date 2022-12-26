@@ -100,4 +100,4 @@ if __name__ == '__main__':
     image_path = settings["image_path"]
     
     # # 发布
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=80)
