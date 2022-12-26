@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{name}}/{{number}}</title>
+    <style>
+        img {
+            width: 100vw;
+        }
+    </style>
+</head>
+
+<body>
+    {% for image in images%}<img src="{{image}}">{% endfor %}
+</body>
+
+</html>

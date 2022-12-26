@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="shortcut  icon" href="{{adress}}/favicon.ico" type="image/x-icon" />
+    <title>{{name}}</title>
+    <style>
+        #Images {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap
+        }
+
+        .ImageBlock {
+            width: 30vw;
+            height: auto;
+            padding: 5px;
+            margin: 5px;
+            border-radius: 5px;
+            box-shadow: 0 3px 8px 6px rgba(77, 77, 77, 0.1)
+        }
+
+        .ImageBlock img {
+            width: 100%;
+            height: auto;
+        }
+
+        .ImageBlock span {
+            display: block;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Images">
+        {% for info_ in info %}
+        <div class="ImageBlock">
+            <a href="{{name}}/{{info_[0]}}"><img src="{{info_[1]}}"></a>
+            <span>No.{{info_[0]}}</span>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

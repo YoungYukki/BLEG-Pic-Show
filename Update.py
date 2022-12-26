@@ -29,7 +29,7 @@ def parser(text:str):
 
 def record(name:str, number:str):
     name = name.lower().capitalize()
-    if bool(cursor.execute(f'SELECT * FROM IMAGE WHERE number={number};').fetchall()) and :
+    if bool(cursor.execute(f'SELECT * FROM IMAGE WHERE number={number};').fetchall()):
         pass
     else:
         cursor.execute(f'INSERT INTO IMAGE(number, name) VALUES({number},"{name}");')
