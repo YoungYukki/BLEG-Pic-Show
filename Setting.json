@@ -1,7 +1,7 @@
 {
     "adress":{
-        "host":"http://192.168.1.14",
-        "port":81
+        "host":"http://192.168.1.11",
+        "port":5001
     },
-    "image_path":"D:\\Source\\BLEG.Pic"
+    "image_path":"/media/hutao/OS/BLEG-Pic"
 }
