@@ -5,6 +5,13 @@ import os
 
 app = Flask(__name__)
 
+# 读取配置文件
+with open('Setting.json', 'r') as temp:
+    settings = json.load(temp)
+host = settings["adress"]["host"]
+port = settings["adress"]["port"]
+image_path = settings["image_path"]
+
 @app.route('/')
 def index():
     names = get_names()
@@ -92,12 +99,5 @@ def image(name, number):
     )
 
 if __name__ == '__main__':
-    # 读取配置文件
-    with open('Setting.json', 'r') as temp:
-        settings = json.load(temp)
-    host = settings["adress"]["host"]
-    port = settings["adress"]["port"]
-    image_path = settings["image_path"]
-    
-    # # 发布
+    # 发布
     app.run(host='0.0.0.0', port=5000)
